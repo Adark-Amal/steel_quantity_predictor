@@ -101,7 +101,7 @@ with st.expander('Unit Casing Input', expanded=True):
             return final
 
         # display predicted output
-        pred_data = pred_model('final_model.pkl')
+        pred_data = pred_model('./final_model.pkl')
 
         # data visualization
         fig = ff.create_table(pred_data, colorscale=[[0, '#6EB52F'], [.5, '#e5fddc'],[1, '#ffffff']], index=True, index_title='Assembly Components')
@@ -181,7 +181,7 @@ with st.expander('Batch Prediction'):
 
         # make predictions and display output
         st.markdown("<p style='color:green; font-family: Verdana;'>Predicted Output</p>", unsafe_allow_html=True)
-        pred_data = pred_model('final_model.pkl')
+        pred_data = pred_model('./final_model.pkl')
         st.dataframe(pred_data)
 
         st.markdown('##')
